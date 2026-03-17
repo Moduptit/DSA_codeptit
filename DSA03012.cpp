@@ -1,28 +1,28 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-const int N = 10000;
+int C[1001][1001];
+const int MOD = 1e9+7;
 
+void init(){
+	for (int i=0; i<=1000; i++){
+		for (int j=0; j<=i; j++){
+			if (j==0 || j==i){
+				C[i][j]=1;
+			}else{
+				C[i][j]=C[i-1][j]+C[i-1][j-1];
+				C[i][j]%=MOD;
+			}
+		}
+	}
+}
 
 int main(){
-    int t; cin >> t;
-    while(t--){
-        string s; cin >> s;
-        map<char, int> cnt;
-        int n = s.length();
-
-        for(char c : s){
-            cnt[c]++;    
-        }
-        
-        int mx = 0;
-        for(auto x : cnt){
-            mx = max(mx, x.second);
-        }
-
-        if(mx <= (n+1)/2) cout << 1 << endl;
-        else cout << -1 << endl;  
-    }
-
-    return 0;
+	int t; cin >> t;
+	init();
+	while (t--){
+		int n,k; cin >> n >> k;
+		cout << C[n][k] << endl;
+	}
+	return 0;
 }

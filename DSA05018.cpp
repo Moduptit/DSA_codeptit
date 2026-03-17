@@ -18,8 +18,6 @@ int dx(string s){
     }
     return ans;
 }
-
-
 int main(){
     int t;
     cin >> t;
