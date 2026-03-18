@@ -15,7 +15,7 @@ int main(){
 		for(auto x : i) cin >> x;
 	}
 
-	for(int i = 0; i < n; i++) res[i][j] = 1;
+	
 
 
 	return 0;
