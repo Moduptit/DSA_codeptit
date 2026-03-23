@@ -11,8 +11,6 @@ bool check() {
     }
     return true;
 }
-
-
 void print() {
     for (int i = 0; i < N; i++) {
         cout << a[i];
@@ -20,25 +18,20 @@ void print() {
     }
     cout << '\n';
 }
-
-
 bool next() {
     int i = N - 1;
     while (i >= 0 && a[i] == 1) {
         a[i] = 0;
         i--;
     }
-    if (i < 0) return false; // đã hết
+    if (i < 0) return false; 
     a[i] = 1;
     return true;
 }
 
 int main() {
     cin >> N;
-
-    
     for (int i = 0; i < N; i++) a[i] = 0;
-
     do {
         if (check()) print();
     } while (next());

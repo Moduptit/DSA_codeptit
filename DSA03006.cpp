@@ -16,8 +16,8 @@ int main(){
         sort(b, b+n);
         bool ok = true;
 
-        int start = n/2;
-        for(int i = 0; i < start; i++){
+        int end = n/2;
+        for(int i = 0; i < end; i++){
             int a1 = a[i], a2 = a[n - 1 - i];
             int b1 = b[i], b2 = b[n - 1 - i];
 

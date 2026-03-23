@@ -16,6 +16,7 @@ int main(){
 		sort(a.begin(), a.end());
 
 		int K = min(k, n-k);
+		//accumulate là hàm tính tính lũy của các phần tử(mặc định là cộng)
 		int s = accumulate(a.begin(), a.begin()+K, 0);
 
 		cout << abs(sum - 2*s) << endl;
